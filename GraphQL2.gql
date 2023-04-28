@@ -1,0 +1,34 @@
+type User {
+  id: String!
+  email: String
+}
+
+input CreateUserDto {
+  email: String!
+  password: String!
+}
+
+input CredentialsDto {
+  email: String!
+  password: String!
+}
+
+type CreateUserResponseDto {
+  id: String!
+}
+
+type TokenResponseDto {
+  token: String!
+}
+
+type Mutation {
+  signup(input: CreateUserDto!): CreateUserResponseDto!
+}
+
+type Query {
+  user(id: Int!): User
+
+  auth {
+    login(credentials: CredentialsDto!): TokenResponseDto
+  }
+}

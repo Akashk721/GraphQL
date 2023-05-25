@@ -1,1 +1,0 @@
-"interface TODO_STRUCT{\n\tname: String\n\tdesc: String\n\tisCompleted: Boolean\n}\n"

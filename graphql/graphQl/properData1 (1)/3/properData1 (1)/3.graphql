@@ -1,1 +1,0 @@
-"schema {\n    query: Query\n    mutation: Mutation\n}\ntype User {\n    id: String!\n    name: String\n}\ntype Query {\n    user(id: String): User\n}\ntype Mutation {\n    addUser(\n        # Name for the User item\n        name: String!\n    ): User!\n}"
